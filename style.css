@@ -1,0 +1,508 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+      background: #999;
+      width: 100%;
+    }
+  }
+  @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Overpass Mono', monospace;
+    font-weight: lighter;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    font-family: 'Overpass Mono', monospace;
+    text-transform: uppercase;
+}
+
+section {
+	padding-top: 12%;
+	padding-bottom: 12%;
+	padding-left: 8%;
+  padding-right: 8%;
+  max-width: 100%;
+
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    opacity: 1.0;
+    contain: layout;
+    z-index: 999;
+}
+
+nav ul {
+    line-height: 30px;
+    list-style: none;
+    overflow: hidden;
+    color: #272727;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 10px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #fff;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #272727;
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+.menu-icon {
+    line-height: 30px;
+    width: 100%;
+    background: #fff;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: #272727;
+    display: none;
+    opacity: 1.0;
+}
+
+@media(max-width: 786px) {
+
+    .logo {
+          position: fixed;
+          top: 0;
+          margin-top: 20px;
+    }
+
+    nav ul {
+          max-height: 0px;
+          background: #fff;
+    }
+
+    nav.black ul {
+          background: #fff;
+    }
+
+    .showing {
+          max-height: 34em;
+    }
+
+    nav ul li {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 24px;
+          text-align: center;
+    }
+
+    .menu-icon {
+          display: block;
+          padding: 1px;
+          
+    }
+    
+    .menu-icon p {
+        padding: 0;
+        text-align: center;
+        top: 0;
+        padding-right: 15px;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+}
+
+.logo img {
+    position: fixed;
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#title {
+    text-align: center;
+    position: relative;
+    background: url('background.png') no-repeat 10% 10%;
+    background-size: cover;
+    padding: 25%;
+}
+
+.title {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 30px;
+    letter-spacing: 10px;
+    padding-bottom: 50%;
+    position: relative;
+    bottom: 140px;
+}
+
+.line-1{
+  position: relative;
+  top: 50%;  
+  width: 400px;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%); 
+  font-family: 'Bebas Neue', monospace;   
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 4s steps(44) 1s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 380px;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
+
+
+#section10 a {
+    padding-top: 60px;
+  }
+  #section10 a span {
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  #section10 a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb10 {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.demo a {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    cursor: pointer;
+  }
+  .demo a:hover {
+    opacity: .5;
+  }
+/* css for about me section */
+
+#about_me {
+    background-color: white;
+    contain: layout;
+}
+
+
+
+#selfie {
+    max-width: 100%;
+    height: auto;
+    border-radius: 500px;
+    object-fit: contain;
+}
+
+#abouttext {
+    width: 60%;
+    float: left;
+}
+
+.column {
+    width: 25%;
+    float: right;
+}
+/* this is for the tech skills section */
+
+#technical_skills {
+    background-color: #F5C6E1;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+#technical_skills h1 {
+    font-size: 50px;
+    font-family: 'Overpass Mono', monospace;
+}
+
+#technical_skills h2 {
+    font-family: 'Overpass Mono', sans-serif;
+    font-size: 25px;
+}
+
+#technical_skills p {
+  font-size: 15px;
+}
+
+#technical_skills img:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.aws, .linux, .python, .sql{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding-top: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    position: relative;
+    contain: layout;
+}
+
+
+.html, .css, .js, .photoshop {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding-top: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    position: relative;
+    contain: layout;
+}
+
+#row1, #row2  {
+    display: inline-flex;
+    text-align: center;
+}
+
+#aws, #linux, #python, #sql, #html, #css, #js, #photoshop {
+    width: 50%;
+    height: auto;
+    display: inline;
+}
+
+/* Education */
+
+#warwicklogo {
+  width: 300px;
+  float: right;
+}
+
+#column1 {
+  float: left;
+  width: 50%
+}
+
+#column2 {
+  float: right;
+  width: 50%;
+
+}
+/* Projects */
+
+#projects {
+    text-align: center;
+    justify-content: center;
+}
+
+#projects h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+
+
+.row img {
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+    padding: 0;
+    cursor: pointer;
+}
+
+.col {
+  padding: 3%;
+  contain: layout;
+  display: inline-block;
+  width: 300px;
+  height: 500px;
+  top: 0;
+}
+
+.row img:hover {
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.row a{
+  text-decoration: none;
+}
+
+#colimg {
+  display: inline-block;
+}
+
+
+/* Get in touch */
+#contact {
+    text-align: center;
+    background-color: #999; 
+    color: white;
+}
+
+#contacticons ul li {
+    display: inline-flex;
+    padding-right: 5%;
+}
+
+#contacticons ul li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    color: #272727
+  }
+
+
+ #contacticons ul li a .icon {
+    position: relative;
+    color: #272727;
+    transition: .5s;
+    z-index: 3;
+  }
+
+#contacticons ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+#contacticons ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+#contacticons ul li a:hover:before {
+    top: 0;
+  }
+  
+  #contacticons ul li:nth-child(1) a:before{
+    background: #272727;
+  }
+  
+  #contacticons ul li:nth-child(2) a:before{
+    background: #272727;
+  }
+  
+  #contacticons ul li:nth-child(3) a:before {
+    background: #272727;
+  }
+  
+  #contacticons ul li:nth-child(4) a:before {
+    background: #272727;
+  }
+
+
+#footer {
+    padding: 1%;
+}
+
+#footer h1{
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 15px;
+}
